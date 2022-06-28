@@ -1,0 +1,20 @@
+package net.serg.currencyraterequestsprocessor.model;
+
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Value;
+
+@Value
+public class CurrencyRate {
+    String charCode;
+    String value;
+
+    @JsonCreator
+    public CurrencyRate(@JsonProperty("charCode") String charCode,
+                        @JsonProperty("value") String value) {
+        this.charCode = charCode;
+        this.value = value;
+    }
+}

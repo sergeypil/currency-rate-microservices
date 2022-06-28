@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+app:
+  rest:
+    api:
+      prefix: /api
+
+ecb-rate-client:
+  url: "http://localhost:8081/api/v1/currencyRate"
+
+
+
