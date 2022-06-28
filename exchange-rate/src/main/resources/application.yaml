@@ -1,0 +1,15 @@
+server:
+  port: 8081
+
+app:
+  cache:
+    size: 365
+  rest:
+    api:
+      prefix: /api
+
+ecb:
+  url: "https://api.exchangerate.host"
+
+
+
