@@ -30,7 +30,7 @@ public class EcbRateClient implements RateClient {
             var response = httpClient.performRequest(urlWithParams);
             return objectMapper.readValue(response, CurrencyRate.class);
         } catch (HttpClientException ex) {
-            throw new RateClientException("Error from Cbr Client host:" + ex.getMessage());
+            throw new RateClientException("Error from Ecb Client host:" + ex.getMessage());
         } catch (Exception ex) {
             log.error("Getting currencyRate error, currency:{}, date:{}", currency, date, ex);
             throw new RateClientException("Can't get currencyRate. currency:" + currency + ", date:" + date);

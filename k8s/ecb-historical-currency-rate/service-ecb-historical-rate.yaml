@@ -1,0 +1,12 @@
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: ecb-historical-currency-rate
+spec:
+  ports:
+    - port: 80
+      targetPort: 8081
+  selector:
+    app: ecb-historical-currency-rate
+  type: ClusterIP

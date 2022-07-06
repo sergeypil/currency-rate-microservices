@@ -11,5 +11,14 @@ app:
 ecb:
   url: "https://api.exchangerate.host"
 
-
+management:
+  server:
+    port: 8091
+  endpoints:
+    enabled-by-default: false
+  endpoint:
+    health:
+      enabled: true
+      probes:
+        enabled: true
 

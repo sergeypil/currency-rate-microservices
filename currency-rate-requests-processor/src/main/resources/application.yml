@@ -9,5 +9,15 @@ app:
 ecb-rate-client:
   url: "http://localhost:8081/api/v1/currencyRate"
 
+management:
+  server:
+    port: 8090
+  endpoints:
+    enabled-by-default: false
+  endpoint:
+    health:
+      enabled: true
+      probes:
+        enabled: true
 
 
