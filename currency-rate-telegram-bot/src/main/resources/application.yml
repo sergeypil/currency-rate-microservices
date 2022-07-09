@@ -1,14 +1,9 @@
 server:
-  port: 8080
-
-app:
-  rest:
-    api:
-      prefix: /api
+  port: 8082
 
 management:
   server:
-    port: 8090
+    port: 8092
   endpoints:
     enabled-by-default: false
   endpoint:
@@ -17,4 +12,11 @@ management:
       probes:
         enabled: true
 
+app:
+  rest:
+    api:
+      prefix: /api
 
+telegram:
+  bot:
+    name: Historical exchange rate for KZT

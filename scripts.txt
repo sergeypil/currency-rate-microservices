@@ -1,7 +1,8 @@
-gralew bootJar
+gradlew bootJar
 
 docker build -t northug/ecb-historical-currency-rate .
 docker build -t northug/currency-rate-requests-processor .
+docker build -t northug/currency-rate-telegram-bot .
 
 docker run -p 8081:8081 northug/ecb-historical-currency-rate
 docker run -p 8080:8080 northug/currency-rate-requests-processor
@@ -13,3 +14,6 @@ kubectl apply -f service-ecb-historical-currency-rate.yaml
 kubectl apply -f deployment-currency-rate-requests-processor.yaml
 kubectl apply -f service-currency-rate-requests-processor.yaml
 kubectl apply -f ingress-currency-rate-requests-processor.yaml
+
+kubectl apply -f deployment-currency-rate-telegram-bot.yaml
+kubectl apply -f service-currency-rate-telegram-bot.yaml
