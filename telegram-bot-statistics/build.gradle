@@ -21,8 +21,10 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-actuator'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.telegram:telegrambots-spring-boot-starter:5.3.0'
 	implementation 'org.springframework.kafka:spring-kafka'
+	implementation 'org.telegram:telegrambots-meta:6.1.0'
+
+
 	compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'

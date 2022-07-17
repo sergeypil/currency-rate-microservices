@@ -5,5 +5,6 @@ import java.time.LocalDate;
 
 public interface CurrencyRateClient {
 
-    CurrencyRate getCurrencyRate(String rateType, String currency, LocalDate date);
+    CurrencyRate getCurrencyRate(String rateType, String currency, LocalDate date,
+                                 ClientExceptions clientExceptions);
 }

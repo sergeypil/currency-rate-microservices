@@ -20,3 +20,6 @@ app:
 telegram:
   bot:
     name: Historical exchange rate for KZT
+
+topic:
+  requests: RATE_REQUESTS

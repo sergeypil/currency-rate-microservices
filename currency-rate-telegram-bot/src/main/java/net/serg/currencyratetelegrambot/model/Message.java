@@ -1,6 +1,6 @@
 package net.serg.currencyratetelegrambot.model;
 
-public enum Messages {
+public enum Message {
     ERROR("Мы не смогли обработать ваш запрос, попробуйте еще раз позже.\n"),
     START(
             "- Узнать курс доллара на сегодня /usd\n" +
@@ -21,7 +21,7 @@ public enum Messages {
     );
     private final String text;
 
-    Messages(String text) {
+    Message(String text) {
         this.text = text;
     }
 

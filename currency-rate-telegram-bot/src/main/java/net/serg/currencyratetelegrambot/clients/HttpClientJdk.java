@@ -10,9 +10,12 @@ import java.net.http.HttpResponse;
 @Service
 @Slf4j
 public class HttpClientJdk implements HttpClient {
+    private static final String HTTP_REQUEST_URL = "http request, url:{}";
+    private static final String ERROR_WHILE_HTTP_REQUEST = "Error while making http request, url:{}";
+
     @Override
     public String performRequest(String url) {
-        log.info("http request, url:{}", url);
+        log.info(HTTP_REQUEST_URL, url);
         var client = java.net.http.HttpClient.newHttpClient();
         var request = HttpRequest.newBuilder()
                 .uri(URI.create(url))
@@ -24,7 +27,7 @@ public class HttpClientJdk implements HttpClient {
             if (ex instanceof InterruptedException) {
                 Thread.currentThread().interrupt();
             }
-            log.error("Http request error, url:{}", url, ex);
+            log.error(ERROR_WHILE_HTTP_REQUEST, url, ex);
             throw new HttpClientException(ex.getMessage());
         }
     }
